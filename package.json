@@ -9,7 +9,7 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "cd ProgrammingClub && ng serve"
+    "start": "cd ProgrammingClub && npm i && ng serve"
   },
   "author": "",
   "license": "ISC"
