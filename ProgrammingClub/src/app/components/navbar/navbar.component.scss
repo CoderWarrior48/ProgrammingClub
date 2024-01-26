@@ -1,0 +1,52 @@
+mat-sidenav-container {
+    height: 100%;
+  
+    mat-drawer-container {
+      height: 100%;
+      
+      mat-drawer {
+        position: fixed;
+        margin-top: 64px;
+        width: 30%;
+        margin-left: 0px;
+      }
+  
+    }
+    
+    .primary {
+      padding: 30px;
+    }
+  
+    #app-toolbar {
+      position: sticky;
+      position: -webkit-sticky;
+      top: 0;
+      z-index: 1000;
+    }
+  
+    .branding {
+      cursor: pointer;
+      overflow: hidden;
+      text-overflow: ellipsis;
+  
+      &.box {
+        display: flex;
+        align-items: center;
+        font-size: large;
+      }
+  
+      &.center {
+        text-align: center;
+        justify-content: center;
+      }
+  
+      &.spacer {
+        flex: 1 1 auto;
+        // margin: 0 50px 0 50px;
+      }
+    }
+  }
+  
+  // mat-drawer {
+  //   resize: horizontal;
+  // }
