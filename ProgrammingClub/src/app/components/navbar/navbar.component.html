@@ -1,11 +1,8 @@
 <!-- Sidebar Navigation method -->
 <mat-sidenav-container>
-    <mat-sidenav
-      #sidenav
-      roll="navigation"
-      (click)="sidenav.toggle()"
-      class="primary"
-    >
+
+    <!-- Sidenav -->
+    <mat-sidenav #sidenav roll="navigation" (click)="sidenav.toggle()" class="primary">
       <mat-nav-list>
         <a mat-list-item routerLink="/" (click)="sidenav.close()">
           <mat-icon>home</mat-icon>
@@ -18,62 +15,34 @@
         </ng-container>
       </mat-nav-list>
     </mat-sidenav>
-  
-    <mat-toolbar id="app-toolbar" color="primary">
+
+
+    <!-- Toolbar -->
+    <mat-toolbar id="app-toolbar" class="nav">
       <div class="hide-gt-sm">
         <button mat-icon-button (click)="sidenav.toggle()">
           <mat-icon>menu</mat-icon>
         </button>
       </div>
   
-      <button
-        mat-button
-        routerLink="/"
-        class="branding box spacer hide-lt-md"
-      >
-        <!-- <mat-icon>home</mat-icon> -->
-       <img src="https://github.com/CoderWarrior48/DelOroApp/blob/FullstackTransition/DelOroApp/src/app/assets/images/do-logo.gif?raw=true" style="width:20px;">Del Oro
-      </button>
+      <button mat-button routerLink="/" class="branding box spacer hide-lt-md">Programming Club</button>
       
-      <button
-        mat-button
-        routerLink="/"
-        class="branding box spacer center hide-gt-sm"
-        [disableRipple]="true"
-      >
-        <!-- <mat-icon>home</mat-icon> -->
-        Del Oro
-      </button>
-      <button
-        mat-button
-        *ngFor="let item of links"
-        routerLinkActive="selected"
-        [routerLink]="item.path"
-        class="hide-lt-md"
-      >
+      <button mat-button routerLink="/" class="branding box spacer center hide-gt-sm" [disableRipple]="true">Del Oro</button>
+
+      <button mat-button *ngFor="let item of links" routerLinkActive="selected" [routerLink]="item.path" class="hide-lt-md">
         {{ item.name }}
       </button>
-      <button mat-raised-button color="accent" routerLink="/sign-in">Sign In</button>
-      <button mat-icon-button (click)="drawer.toggle()">
-        <mat-icon matBadge="8" matBadgeSize="small" matBadgeColor="warn">feed</mat-icon>
-      </button>
+    
+      <button mat-raised-button color="accent" routerLink="/sign-in">Join Now</button>
       <button mat-icon-button routerLink="/settings">
         <mat-icon>settings</mat-icon>
       </button>
     </mat-toolbar>
    
-      <mat-drawer-container  autosize>
-        <mat-drawer
-        #drawer
-        mode="side"
-        position="end">
-         <div class="newsfeed">
-          <mat-toolbar id="app-toolbar" color="primary">
-            <button mat-button class="branding box spacer center hide-gt-sm">News</button>
-          </mat-toolbar>
-        </div>
-        </mat-drawer>
-        <ng-content style="margin: 100px;"></ng-content>
-      </mat-drawer-container>
+
+
+      
+    <ng-content></ng-content>
+
   
   </mat-sidenav-container>
