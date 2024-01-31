@@ -1,6 +1,6 @@
 /* Background styles */
 .page {
-    height: 100vh;
+    min-height: 100vh;
     background-color:hsla(140,0%,9%,1);
     background-image:
     radial-gradient(at 15% 29%, hsla(133,81%,29%,1) 0px, transparent 50%),
@@ -49,3 +49,4 @@
 img {
     width: 50%;
 }
+
