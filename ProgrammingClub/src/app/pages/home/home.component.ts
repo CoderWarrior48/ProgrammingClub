@@ -7,8 +7,8 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
   public slides = [
-    { src: "assets/images/game_design.jpg" },
-    { src: "assets/images/web_development.png" },
-    { src: "assets/images/data_science.jpg" },
+    { src: "assets/images/game_design.jpg", title: "Games" },
+    { src: "assets/images/web_development.png", title: "Apps" },
+    { src: "assets/images/data_science.jpg", title: "Data Algorithims" },
   ];
 }
