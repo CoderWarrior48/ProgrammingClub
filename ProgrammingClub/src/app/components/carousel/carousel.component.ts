@@ -1,19 +1,15 @@
 import { Component, Input } from '@angular/core';
-import { trigger, transition, style, animate } from '@angular/animations'
+import { fadeIn, fadeOut } from './carousel.animations';
+import { trigger, transition, useAnimation} from "@angular/animations";
 
 @Component({
   selector: 'app-carousel',
   templateUrl: './carousel.component.html',
   styleUrl: './carousel.component.scss',
   animations: [
-    trigger('carouselAnimation', [
-      transition('void => *', [
-        style({ opacity: 0 }),
-        animate('300ms', style({ opacity: 1 }))
-      ]),
-      transition('* => void', [
-        animate('300ms', style({ opacity: 0 }))
-      ])
+    trigger("carouselAnimation", [
+      transition("void => *", [useAnimation(fadeIn)]),
+      transition("* => void", [useAnimation(fadeOut)]),
     ])
   ]
 })
