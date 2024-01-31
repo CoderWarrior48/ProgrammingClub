@@ -8,8 +8,8 @@ import { trigger, transition, useAnimation} from "@angular/animations";
   styleUrl: './carousel.component.scss',
   animations: [
     trigger("carouselAnimation", [
-      transition("void => *", [useAnimation(fadeIn)]),
-      transition("* => void", [useAnimation(fadeOut)]),
+      transition("void => *", [useAnimation(fadeIn, {params: { time: '1300ms' }} )]),
+      transition("* => void", [useAnimation(fadeOut, {params: { time: '1300ms' }})]),
     ])
   ]
 })
