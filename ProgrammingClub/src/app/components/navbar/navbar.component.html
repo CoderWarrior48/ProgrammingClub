@@ -18,7 +18,7 @@
 
 
     <!-- Toolbar -->
-    <mat-toolbar id="app-toolbar" class="nav">
+    <mat-toolbar id="app-toolbar" [class]="nav">
       <div class="hide-gt-sm">
         <button mat-icon-button (click)="sidenav.toggle()">
           <mat-icon>menu</mat-icon>
@@ -34,6 +34,7 @@
       </button>
     
       <button mat-raised-button color="accent" routerLink="/sign-in">Join Now</button>
+      <!-- <h1>Debug:{{debug | json}}</h1> -->
       <button mat-icon-button routerLink="/settings">
         <mat-icon>settings</mat-icon>
       </button>

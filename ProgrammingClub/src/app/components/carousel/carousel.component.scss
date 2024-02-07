@@ -6,6 +6,7 @@
     flex: 1;
   }
   
+
   .carousel {
     position: relative;
     height: 100%;
@@ -13,7 +14,18 @@
     overflow: hidden;
     border-radius: 0.5em;
   }
-  
+
+  .title {
+    padding: 15px;
+    background-color: black;
+    position: absolute;
+    top: 78%;
+    right: 0
+    ;
+    width: 100%;
+    text-align: center;
+  }
+
   .slide {
     position: absolute;
     top: 0;
@@ -22,13 +34,13 @@
     height: 100%;
     object-fit: cover;
     // zoom effect on hover
-    transition: transform 150ms cubic-bezier(0.25, 0.46, 0.45, 0.84);
-    border-radius: 0.5em;
+    // transition: transform 150ms cubic-bezier(0.25, 0.46, 0.45, 0.84);
+    // border-radius: 0.5em;
   }
   
-  .slide:hover {
-    transform: scale(1.025);
-  }
+  // .slide:hover {
+  //   transform: scale(1.025);
+  // }
   
   // =========================
   // Next and Prev buttons

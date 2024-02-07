@@ -1,5 +1,6 @@
 /* Background styles */
 .page {
+    padding-top: 50px;
     min-height: 100vh;
     background-color:hsla(140,0%,9%,1);
     background-image:
@@ -51,8 +52,8 @@ img {
 }
 
 .container {
+    margin: 50px;
     display: block;
-    height: 500px;
-    width: 500px;
-    padding: 2em;
+    box-sizing: border-box;
+    height: 400px;
   }
