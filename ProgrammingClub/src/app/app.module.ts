@@ -9,6 +9,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { MaterialModule } from './material/material.module';
 import { FooterComponent } from './components/footer/footer.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
+import { CanvasBoxComponent } from './components/canvas-box/canvas-box.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { CarouselComponent } from './components/carousel/carousel.component';
     NavbarComponent,
     FooterComponent,
     CarouselComponent,
+    CanvasBoxComponent,
   ],
   imports: [
     BrowserModule,
