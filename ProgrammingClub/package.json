@@ -25,6 +25,7 @@
     "http-server": "^14.1.1",
     "rxjs": "~7.8.0",
     "three": "^0.161.0",
+    "three-to-cannon": "^5.0.1",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.3"
   },
