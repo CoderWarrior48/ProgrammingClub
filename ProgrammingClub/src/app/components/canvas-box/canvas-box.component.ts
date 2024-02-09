@@ -19,7 +19,7 @@ export class CanvasBoxComponent {
 			let camera:any, controls:any, scene:any, renderer:any;
 
       //determine world values
-			const worldWidth = 200, worldDepth = 200;
+			const worldWidth = 800, worldDepth = 200;
 			const worldHalfWidth = worldWidth / 2;
 			const worldHalfDepth = worldDepth / 2;
 			const data = generateHeight( worldWidth, worldDepth );
@@ -134,7 +134,7 @@ export class CanvasBoxComponent {
 				geometry.computeBoundingSphere();
 
         //load texture
-				const texture = new THREE.TextureLoader().load( 'assets/images/atlas.png' );
+				const texture = new THREE.TextureLoader().load( 'assets/images/atlas_blue.png' );
 				texture.colorSpace = THREE.SRGBColorSpace;
 				texture.magFilter = THREE.NearestFilter;
 
