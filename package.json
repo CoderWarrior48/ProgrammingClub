@@ -1,12 +1,12 @@
 {
   "dependencies": {
-    "@angular/cli": "^17.1.1"
+    "@angular/cli": "^17.1.1",
+    "cannon": "^0.6.2"
   },
   "name": "programmingclub",
   "description": "",
   "version": "1.0.0",
   "main": "index.js",
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "cd ProgrammingClub && npm i && ng serve"
