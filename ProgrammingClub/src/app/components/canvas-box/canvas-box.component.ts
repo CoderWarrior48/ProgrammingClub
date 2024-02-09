@@ -88,10 +88,10 @@ export class CanvasBoxComponent {
 		// animate();
 
       //init vars
-			let camera:any, controls:any, scene:any, renderer:any;
+			let camera:any, controls:any, scene:any, renderer:any, lookObj: any;
 
       //determine world values
-			const worldWidth = 10, worldLength = 10;
+			const worldWidth = 50, worldLength = 50;
 			const worldHalfWidth = worldWidth / 2;
 			const worldHalfDepth = worldLength / 2;
 			const data = generateHeight( worldWidth, worldLength );
@@ -99,8 +99,8 @@ export class CanvasBoxComponent {
 			const clock = new THREE.Clock();
 
       //run
-			let cube = init();
-			animate(cube);
+			init();
+			animate();
 			 
 
 
@@ -221,8 +221,8 @@ export class CanvasBoxComponent {
 
 				const g = new THREE.BoxGeometry( 10, 10, 10 );
 				const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
-				const cube = new THREE.Mesh( g, material );
-				scene.add( cube );
+				const lookObj = new THREE.Mesh( g, material );
+				scene.add( lookObj );
 
         //load light
 				const ambientLight = new THREE.AmbientLight( 0xeeeeee, 3 );
@@ -251,7 +251,6 @@ export class CanvasBoxComponent {
 
 				//check if the window size changes, if so run onWindowResize
 				window.addEventListener( 'resize', onWindowResize );
-				return cube
 			}
 
 			function onWindowResize() {
@@ -300,12 +299,13 @@ export class CanvasBoxComponent {
 
 			//
 
-			function animate(cube: any) {
+			function animate() {
 
 				requestAnimationFrame( animate );
 				const forward = new THREE.Vector3(0, 0, -1).applyQuaternion(camera.quaternion); 
 				console.log(forward)
-				cube.position.x,cube.position.y,cube.position.z = forward
+				//lookObj.position.z += 5
+				//cube.position.x,cube.position.y,cube.position.z = forward
 				render();
 				//Stats.update();
 
